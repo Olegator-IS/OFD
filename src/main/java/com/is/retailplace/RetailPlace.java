@@ -65,11 +65,13 @@ public class RetailPlace {
 
     public static Uni<RetailPlace> get(PgPool client, long id){
 
-        return client.preparedQuery("select * from retail_place_address where retail_place_id = $1")
+  /*      return client.preparedQuery("select * from retail_place_address where retail_place_id = $1")
                 .execute().onItem().transform(RowSet::iterator)
                 .onItem().transform(iterator -> iterator.hasNext() ? RetailPlaceAddress.from(iterator.next()) : null).onItem()
                 .transform(retailPlaceAddress -> new RetailPlace(client.preparedQuery("select * from retail_place where id = $1").execute()
                         .onItem().transform(pgRowSet -> new RetailPlace(pgRowSet.iterator().next().getLong("id"), pgRowSet.iterator().next().getString("title"), retailPlaceAddress))));
+    */
+        return null;
     }
 
     public long getId() {
