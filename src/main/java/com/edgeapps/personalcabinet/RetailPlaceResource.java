@@ -1,7 +1,7 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
-import com.edgeapps.retailplace.RetailPlace;
-import com.edgeapps.retailplace.RetailPlaceAddress;
+import com.edgeapps.personalcabinet.retailplace.RetailPlace;
+import com.edgeapps.personalcabinet.retailplace.RetailPlaceAddress;
 import io.smallrye.mutiny.Uni;
 import io.smallrye.mutiny.tuples.Tuple2;
 import io.vertx.mutiny.pgclient.PgPool;

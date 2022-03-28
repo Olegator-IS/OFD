@@ -1,6 +1,6 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
-import com.edgeapps.organization.LegalAddress;
+import com.edgeapps.personalcabinet.organization.LegalAddress;
 import io.smallrye.mutiny.Uni;
 import org.jboss.resteasy.reactive.RestSseElementType;
 

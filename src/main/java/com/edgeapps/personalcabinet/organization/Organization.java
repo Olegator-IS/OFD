@@ -1,4 +1,4 @@
-package com.edgeapps.organization;
+package com.edgeapps.personalcabinet.organization;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.smallrye.mutiny.Uni;

@@ -1,6 +1,6 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
-import com.edgeapps.organization.Organization;
+import com.edgeapps.personalcabinet.organization.Organization;
 import io.smallrye.mutiny.Uni;
 import io.vertx.mutiny.pgclient.PgPool;
 import org.jboss.resteasy.reactive.RestResponse;

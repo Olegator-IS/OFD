@@ -1,4 +1,4 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
 import io.quarkus.security.identity.SecurityIdentity;
 import org.jboss.resteasy.reactive.NoCache;

@@ -1,6 +1,6 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
-import com.edgeapps.handbook.Handbook;
+import com.edgeapps.personalcabinet.handbook.Handbook;
 import io.smallrye.mutiny.Multi;
 import io.vertx.mutiny.pgclient.PgPool;
 

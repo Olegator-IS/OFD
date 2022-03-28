@@ -1,4 +1,4 @@
-package com.edgeapps.organization;
+package com.edgeapps.personalcabinet.organization;
 
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;

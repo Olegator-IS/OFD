@@ -1,4 +1,4 @@
-package com.edgeapps.handbook;
+package com.edgeapps.personalcabinet.handbook;
 
 import io.smallrye.mutiny.Multi;
 import io.vertx.mutiny.pgclient.PgPool;

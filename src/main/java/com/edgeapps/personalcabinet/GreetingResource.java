@@ -1,4 +1,4 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

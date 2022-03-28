@@ -1,4 +1,4 @@
-package com.edgeapps.retailplace;
+package com.edgeapps.personalcabinet.retailplace;
 
 import io.smallrye.mutiny.Uni;
 import io.vertx.mutiny.pgclient.PgPool;

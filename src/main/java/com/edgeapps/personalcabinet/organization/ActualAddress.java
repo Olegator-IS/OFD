@@ -1,4 +1,4 @@
-package com.edgeapps.organization;
+package com.edgeapps.personalcabinet.organization;
 
 public class ActualAddress {
 

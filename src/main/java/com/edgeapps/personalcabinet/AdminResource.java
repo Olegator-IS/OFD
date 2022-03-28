@@ -1,4 +1,4 @@
-package com.edgeapps;
+package com.edgeapps.personalcabinet;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;
