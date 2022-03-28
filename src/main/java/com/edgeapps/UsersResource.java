@@ -1,4 +1,4 @@
-package com.is;
+package com.edgeapps;
 
 import io.quarkus.security.identity.SecurityIdentity;
 import org.jboss.resteasy.reactive.NoCache;
@@ -12,7 +12,7 @@ import javax.ws.rs.Path;
 public class UsersResource {
 
     @Inject
-    SecurityIdentity securityIdentity;
+    private SecurityIdentity securityIdentity;
 
     @GET
     @Path("/me")

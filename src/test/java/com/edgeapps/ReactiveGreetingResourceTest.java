@@ -1,4 +1,4 @@
-package com.is;
+package com.edgeapps;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;

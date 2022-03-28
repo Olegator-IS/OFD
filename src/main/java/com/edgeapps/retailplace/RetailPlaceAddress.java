@@ -1,14 +1,5 @@
-package com.is.retailplace;
+package com.edgeapps.retailplace;
 
-import java.util.HashMap;
-import java.util.Map;
-import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.smallrye.mutiny.Uni;
 import io.vertx.mutiny.pgclient.PgPool;
 import io.vertx.mutiny.sqlclient.Row;
@@ -35,7 +26,7 @@ public class RetailPlaceAddress {
                 row.getString("region"), row.getString("street"));
     }
 
-    public static Uni<RetailPlaceAddress> get(PgPool client, long id){
+    public static Uni<RetailPlaceAddress> get(PgPool client, long id) {
         return client.preparedQuery("select * from retail_place_address where retail_place_id = $1")
                 .execute(Tuple.of(id)).onItem().transform(RowSet::iterator)
                 .onItem().transform(iterator -> iterator.hasNext() ? RetailPlaceAddress.from(iterator.next()) : null);

@@ -1,27 +1,11 @@
-package com.is.retailplace;
+package com.edgeapps.retailplace;
 
-import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.annotation.Generated;
-
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.smallrye.mutiny.Uni;
 import io.vertx.mutiny.pgclient.PgPool;
 import io.vertx.mutiny.sqlclient.Row;
-import io.vertx.mutiny.sqlclient.RowSet;
 import io.vertx.mutiny.sqlclient.Tuple;
-import com.is.organization.LegalAddress;
-import com.is.organization.Organization;
 
-import static com.is.organization.LegalAddress.from;
+import java.util.Arrays;
 
 public class RetailPlace {
 
@@ -52,7 +36,8 @@ public class RetailPlace {
                 .preparedQuery("INSERT INTO retail_place (title) VALUES ($1) RETURNING id")
                 .execute(Tuple.of(retailPlace.getRetailPlaceTitle()))
                 .onItem().transformToUni(id -> conn.
-                        preparedQuery("INSERT INTO retail_place_address (retail_place_id,region_code,city,locality_id,apartment,house,region,street) " +
+                        preparedQuery("INSERT INTO retail_place_address (retail_place_id,region_code,city,locality_id,apartment,house,region,street) "
+                                +
                                 "VALUES ($1,$2,$3,$4,$5,$6,$7,$8) returning retail_place_id")
                         .execute(Tuple.tuple(Arrays.asList(id.iterator().next().getLong("id"), retailPlace.getRetailPlaceAddress().getRegionCode(),
                                 retailPlace.getRetailPlaceAddress().getCity(), retailPlace.getRetailPlaceAddress().getLocalityId(),
@@ -63,7 +48,7 @@ public class RetailPlace {
     }
 
 
-    public static Uni<RetailPlace> get(PgPool client, long id){
+    public static Uni<RetailPlace> get(PgPool client, long id) {
 
   /*      return client.preparedQuery("select * from retail_place_address where retail_place_id = $1")
                 .execute().onItem().transform(RowSet::iterator)

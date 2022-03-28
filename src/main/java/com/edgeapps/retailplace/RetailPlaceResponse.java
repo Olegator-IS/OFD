@@ -1,4 +1,4 @@
-package com.is.retailplace;
+package com.edgeapps.retailplace;
 
 public class RetailPlaceResponse {
 

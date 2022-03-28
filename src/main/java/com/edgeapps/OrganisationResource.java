@@ -1,32 +1,26 @@
-package com.is;
-//import io.smallrye.mutiny.Uni;
+package com.edgeapps;
 
-import com.is.organization.Organization;
+import com.edgeapps.organization.Organization;
 import io.smallrye.mutiny.Uni;
 import io.vertx.mutiny.pgclient.PgPool;
-import com.is.organization.Organization;
 import org.jboss.resteasy.reactive.RestResponse;
 import org.jboss.resteasy.reactive.RestSseElementType;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
 import java.net.URI;
 import java.sql.SQLException;
-import java.util.List;
 
 import static javax.ws.rs.core.Response.Status.CREATED;
-import static javax.ws.rs.core.Response.ok;
 
 @Path("/organisations")
 public class OrganisationResource {
     @Inject
-    PgPool client;
+    private PgPool client;
     @Path("/register-organisation")
     @POST
     public Uni<Response> createOrg(Organization organization) throws SQLException {
@@ -40,7 +34,7 @@ public class OrganisationResource {
 
     @Path("/change-organisation")
     @POST
-    public Uni<Response> ChangeOrg(Organization organization) throws SQLException {
+    public Uni<Response> changeOrg(Organization organization) throws SQLException {
 
 
 

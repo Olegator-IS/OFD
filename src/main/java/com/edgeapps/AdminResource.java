@@ -1,4 +1,4 @@
-package com.is;
+package com.edgeapps;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;

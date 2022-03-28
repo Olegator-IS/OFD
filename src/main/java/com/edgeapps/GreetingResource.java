@@ -1,4 +1,4 @@
-package com.is;
+package com.edgeapps;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
