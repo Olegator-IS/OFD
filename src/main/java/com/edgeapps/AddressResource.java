@@ -21,8 +21,10 @@ public class AddressResource {
 // Each element will be sent as JSON
    @RestSseElementType(MediaType.APPLICATION_JSON)
     public Uni<List<LegalAddress>> get() {
+        System.out.println("test");
         System.out.println(LegalAddress.findAll(client).map(address -> address));
         return LegalAddress.findAll(client).map(addresses -> addresses);
+
         //
 
 
