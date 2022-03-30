@@ -21,6 +21,7 @@ import static javax.ws.rs.core.Response.Status.CREATED;
 public class OrganisationResource {
     @Inject
     private PgPool client;
+
     @Path("/register-organisation")
     @POST
     public Uni<Response> createOrg(Organization organization) throws SQLException {
@@ -29,13 +30,12 @@ public class OrganisationResource {
                 .onItem()
                 .transform(id -> URI.create("/organisation/" + id))
                 .onItem()
-                .transform(uri  -> Response.ok(organization).status(CREATED).build());
+                .transform(uri -> Response.ok(organization).status(CREATED).build());
     }
 
     @Path("/change-organisation")
     @POST
     public Uni<Response> changeOrg(Organization organization) throws SQLException {
-
 
 
         return Organization.changeOrg(client, organization)
@@ -50,8 +50,9 @@ public class OrganisationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @RestSseElementType(MediaType.APPLICATION_JSON)
     public Uni<Response> getOrg(Organization organization) {
-        return Organization.checkOrganization(client, organization).onItem().transform(organization1 -> organization1 != null ? Response.ok(organization1) : Response.status(RestResponse.Status.NOT_FOUND))
+        return Organization.checkOrganization(client,
+                        organization).onItem().transform(
+                                organization1 -> organization1 != null ? Response.ok(organization1) : Response.status(RestResponse.Status.NOT_FOUND))
                 .onItem().transform(Response.ResponseBuilder::build);
     }
-    //
 }

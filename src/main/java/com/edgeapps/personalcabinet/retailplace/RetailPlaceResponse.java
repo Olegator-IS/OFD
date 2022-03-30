@@ -1,7 +1,9 @@
 package com.edgeapps.personalcabinet.retailplace;
 
-public class RetailPlaceResponse {
+import lombok.Data;
 
+@Data
+public class RetailPlaceResponse {
     private String errorCode;
     private long id;
     private boolean isSuccessful;
@@ -13,29 +15,5 @@ public class RetailPlaceResponse {
         this.errorCode = errorCode;
         this.id = id;
         this.isSuccessful = isSuccessful;
-    }
-
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public boolean isSuccessful() {
-        return isSuccessful;
-    }
-
-    public void setSuccessful(boolean successful) {
-        isSuccessful = successful;
     }
 }

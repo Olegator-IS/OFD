@@ -19,7 +19,7 @@ public class AddressResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
 // Each element will be sent as JSON
-   @RestSseElementType(MediaType.APPLICATION_JSON)
+    @RestSseElementType(MediaType.APPLICATION_JSON)
     public Uni<List<LegalAddress>> get() {
         System.out.println("test");
         System.out.println(LegalAddress.findAll(client).map(address -> address));
@@ -35,8 +35,6 @@ public class AddressResource {
 
                 .map(data -> (data));*/
     }
-
-
 
 
 }
