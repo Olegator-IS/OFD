@@ -39,7 +39,7 @@ public class Organization {
         this.billingAccountNumber = billingAccountNumber;
     }
 
-    public Organization(Long id, String iinBin, String title, String email, String phone, String bic, String paymentAccount, LegalAddress legalAddress, ActualAddress actualAddress, String billingAccountNumber) {
+    public Organization(long id, String iinBin, String title, String email, String phone,String bic, String paymentAccount, LegalAddress legalAddress, ActualAddress actualAddress, String billingAccountNumber) {
         this.id = id;
         this.iinBin = iinBin;
         this.title = title;

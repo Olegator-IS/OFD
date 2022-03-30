@@ -14,7 +14,7 @@ import java.util.List;
 @Path("/hello")
 public class AddressResource {
     @Inject
-    private io. vertx.mutiny.pgclient.PgPool client;
+    private io.vertx.mutiny.pgclient.PgPool client;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
