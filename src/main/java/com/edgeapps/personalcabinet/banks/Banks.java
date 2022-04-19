@@ -16,7 +16,7 @@ public class Banks {
     private String nameEn;
     private String bic;
     private String paymentaccount;
-    //
+
 
 
     public Banks(int id, String nameRu, String nameKz, String nameEn, String bic, String paymentaccount, String correspondentAccount) {

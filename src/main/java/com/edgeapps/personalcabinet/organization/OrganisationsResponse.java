@@ -7,7 +7,7 @@ public class OrganisationsResponse {
     private String errorCode;
     private long id;
     private boolean isSuccessful;
-    //
+
 
     public OrganisationsResponse() {
     }

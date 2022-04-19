@@ -21,6 +21,6 @@ public class ActualAddresses {
     private Double latitude;
     private Double longitude;
     private String geonimId;
-    //
+
 
 }

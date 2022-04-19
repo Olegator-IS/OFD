@@ -51,7 +51,7 @@ public class Organisation {
     private PostalAddresses postalAddresses;
     private ActualAddresses actualAddresses;
     private String createdBy;
-    //
+
 
     public Organisation(Integer id, String title, String fullTitle, Integer organisationForm, String legalAddress, String actualAddress, String inn, String ogrn, String kpp, String okved, String generalManager, Integer responsiblePersonId, String billingAccountNumber, Integer tenantId, boolean isEmailEnabled, boolean isSmsEnabled, Integer type) {
         this.id = id;

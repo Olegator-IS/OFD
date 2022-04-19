@@ -5,5 +5,5 @@ import lombok.Data;
 public class GeneralManagerPosition {
     private Integer id;
     private String name;
-    //
+
 }

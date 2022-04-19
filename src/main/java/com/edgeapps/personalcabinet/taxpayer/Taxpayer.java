@@ -8,6 +8,6 @@ public class Taxpayer {
     private String surname;
     private String name;
     private String middlename;
-    //
+
 }
 
