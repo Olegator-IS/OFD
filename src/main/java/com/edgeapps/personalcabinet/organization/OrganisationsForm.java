@@ -18,6 +18,7 @@ public class OrganisationsForm {
     private String shortTitle;
     private String shortTitleKz;
     private String shortTitleEn;
+    //
 
     public OrganisationsForm(int id, String title, String titleKz, String titleEn, String shortTitle, String shortTitleKz, String shortTitleEn) {
         this.id = id;

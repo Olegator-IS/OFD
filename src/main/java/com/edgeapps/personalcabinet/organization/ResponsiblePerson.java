@@ -5,4 +5,5 @@ import lombok.Data;
 public class ResponsiblePerson {
     private String phone;
     private String email;
+    //
 }

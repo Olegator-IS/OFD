@@ -12,6 +12,7 @@ public class BankData {
     private String paymentAccount;
     private String correspondentAccount;
     private String name;
+    //
 
 
     public BankData(int id, String nameRu, String nameKz, String nameEn, String bic, String paymentAccount, String correspondentAccount, String name) {

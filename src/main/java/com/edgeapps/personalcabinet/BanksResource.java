@@ -15,11 +15,12 @@ import javax.ws.rs.core.MediaType;
 public class BanksResource {
     @Inject
     private PgPool client;
-
+//
     @GET
     @Path("/getAll")
     @Produces(MediaType.APPLICATION_JSON)
     public Multi<Banks> getBanks() {
         return Banks.findAll(client);
     }
+
 }

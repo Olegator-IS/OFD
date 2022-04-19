@@ -12,6 +12,7 @@ public class Positions {
     private String nameRu;
     private String nameKz;
     private String nameEn;
+    //
 
     public Positions(int id, String nameRu, String nameKz, String nameEn) {
         this.id = id;

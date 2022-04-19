@@ -22,6 +22,7 @@ public class LegalAddresses {
     private Double latitude;
     private Double longitude;
     private String geonimId;
+    //
 
     public LegalAddresses(int id, String regionCode, String index, String area, String city, String village, String street, String house, String housing, String apartment, String fullAddress, String localityId, Double latitude, Double longitude, String geonimId) {
         this.id = id;

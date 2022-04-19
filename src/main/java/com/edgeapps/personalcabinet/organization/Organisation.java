@@ -51,6 +51,7 @@ public class Organisation {
     private PostalAddresses postalAddresses;
     private ActualAddresses actualAddresses;
     private String createdBy;
+    //
 
     public Organisation(Integer id, String title, String fullTitle, Integer organisationForm, String legalAddress, String actualAddress, String inn, String ogrn, String kpp, String okved, String generalManager, Integer responsiblePersonId, String billingAccountNumber, Integer tenantId, boolean isEmailEnabled, boolean isSmsEnabled, Integer type) {
         this.id = id;
@@ -114,6 +115,7 @@ public class Organisation {
 
 
         return client.withTransaction(conn -> {
+
 
             Uni<RowSet<Row>> insertOne = conn.preparedQuery("INSERT INTO addresses_ (region_code,city,housing,locality_id,apartment,index,house,full_address,street)"
                                     +
@@ -243,7 +245,7 @@ public class Organisation {
 
 
     public static Multi<Organisation> checkOrganization(PgPool client) {
-        return client.query("SELECT * FROM organisation_ where id = 108").execute()
+        return client.query("SELECT * FROM organisation_ where id = 118").execute()
                 .onItem().transformToMulti(set -> Multi.createFrom().iterable(set))
                 .onItem().transform(Organisation::from);
     }
